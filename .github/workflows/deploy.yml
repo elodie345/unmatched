@@ -17,9 +17,9 @@ jobs:
 
     - name: Deploy to FTP server
       env:
-        FTP_HOST: ${{ secrets.FTP_HOST }}
-        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        FTP_HOST: ${{ ftp.unmatched.ch}}
+        FTP_USERNAME: ${{ wo9ae_unmatched }}
+        FTP_PASSWORD: ${{ Q-ZDWgKRs4wrwMg }}
       run: |
         lftp -c "open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST; mirror -R . /path/to/remote/directory"
 
